@@ -32,7 +32,7 @@
 		</div>
 	</div>
 	<div class="text-center">
-		<h1>VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning</h1>
+		<h1>Hierarchical Semantic-Acoustic Modeling via Semi-Discrete Residual Representations for Expressive End-to-End Speech Synthesis </h1>
 		<p class="fst-italic mb-0"><br>VoxCPM Team</p>
 		<p><b>ModelBest｜THUHCSI｜OpenBMB</b></p>
 		<div class="image-container">
@@ -57,7 +57,7 @@
 	</div>
 	
 	
-	<p><b>Abstract:</b> We present VoxCPM, an end-to-end speech generation model based on diffusion autoregressive modeling. Built upon the efficient large language model MiniCPM-4, VoxCPM extends its capabilities to speech synthesis by combining hierarchical language modeling, finite scalar quantization (FSQ), and local Diffusion Transformers (DiT) to overcome the information loss of token methods while improving the stability of continuous autoregressive representations. Leveraging the structured semi-discrete representations produced by FSQ, the model implicitly disentangles high-level semantics from fine-grained acoustic features, enabling more natural, faithful, and prosodically expressive speech. Trained on over 1.8 million hours of bilingual Chinese–English corpus, VoxCPM-0.5B achieves state-of-the-art performance among open-source systems on multiple TTS benchmarks, with advanced context-aware speech generation and highly realistic zero-shot voice cloning capabilities. VoxCPM achieves an RTF of 0.17 on consumer GPUs, enabling efficient low-latency streaming and serving as a powerful foundation for true-to-life speech synthesis.
+	<p><b>Abstract:</b> Generative models for speech synthesis face a persistent trade-off: discrete tokens ensure stability but sacrifice expressivity, while continuous signals retain richness but suffer from autoregressive error accumulation. This challenge has driven the field towards multi-stage pipelines that rely on pre-trained speech tokenizers, but these create a rigid division between semantic and acoustic modeling, limiting holistic, context-aware generation. We resolve these dilemma with a unified, end-to-end diffusion autoregressive framework built on a novel principle. Our design learns a semi-discrete residual representation, which induces a natural specialization within a single, cohesive model: a quantized backbone captures stable, high-level semantic structure, while a continuous residual preserves fine-grained acoustic detail. This hierarchical  semantic-acoustic representation guides a local diffusion-based decoder to generate high-fidelity speech latents. The entire architecture is trained end-to-end under a simple diffusion objective, eliminating any dependency on external speech tokenizers. Trained on over 1 million hours of speech, our 0.5B-parameter model achieves state-of-the-art zero-shot TTS performance among open-source systems, demonstrating that our approach delivers expressive, stable, and context-aware synthesis. 
 </p>
 	<p><b>Key Features</b>
 		<ul>
