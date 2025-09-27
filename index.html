@@ -72,7 +72,19 @@
 	</p>
 
 	<p>
-		<b>Contents</b>
+		<b>Experimental Samples</b>
+		<ul>
+			
+				<li><a href="#main-results-on-zero-shot-tts">Main Results on Zero-Shot TTS</a></li>
+			
+				<li><a href="#ablation-study-effect-of-the-semi-discrete-bottleneck">Ablation Study: Effect of the Semi-Discrete Bottleneck</a></li>
+			
+				<li><a href="#ablation-study-effect-of-residual-acoustic-modeling">Ablation Study: Effect of Residual Acoustic Modeling</a></li>
+			
+		</ul>
+	</p>
+	<p>
+		<b>More Cases for Showing Capabilities</b>
 		<ul>
 			
 				<li><a href="#monolingual-cross-lingual-voice-cloning">Monolingual &amp; Cross-Lingual Voice Cloning</a></li>
@@ -83,7 +95,7 @@
 			
 				<li><a href="#voice-and-recording-condition-cloning">Voice and Recording Condition Cloning</a></li>
 			
-				<li><a href="#context-aware-speech-generation">Context-Aware Speech Generation</a></li>
+				<li><a href="#text-guided-speech-generation">Text-Guided Speech Generation</a></li>
 			
 				<li><a href="#mathematical-symbol-awareness">Mathematical Symbol Awareness</a></li>
 			
@@ -91,6 +103,352 @@
 			
 		</ul>
 	</p>
+</div>
+
+
+
+
+
+
+
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	
+	<div class="text-center">
+		<h2 id="main-results-on-zero-shot-tts" style="text-align: center;">Main Results on Zero-Shot TTS</h2>
+		 
+	</div>
+	
+	
+	<div class="table-responsive pt-3">
+		<table class="table table-hover pt-2">
+			<thead>
+				<tr>
+					<th style="vertical-align : middle;text-align: center">Prompt</th><th style="vertical-align : middle;text-align: center">Text</th><th style="vertical-align : middle;text-align: center">VoxCPM-Emilia</th><th style="vertical-align : middle;text-align: center">VoxCPM</th><th style="vertical-align : middle;text-align: center">MaskGCT</th><th style="vertical-align : middle;text-align: center">CosyVoice 2</th><th style="vertical-align : middle;text-align: center">IndexTTS 2</th>
+				</tr>
+			</thead>
+			<tbody>
+			
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/prompt/13.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">After his execution Ogilvie&#39;s followers were rounded up and put in jail.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/VoxCPM-Emilia/13.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/VoxCPM/13.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/MaskGCT/13.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/CosyVoice2/13.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/IndexTTS2/13.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/prompt/17.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">Rooftop Mounted for homes with no attics.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/VoxCPM-Emilia/17.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/VoxCPM/17.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/MaskGCT/17.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/CosyVoice2/17.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/IndexTTS2/17.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/prompt/19.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">He later worked as a journalist, and then became a novelist and playwright.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/VoxCPM-Emilia/19.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/VoxCPM/19.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/MaskGCT/19.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/CosyVoice2/19.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/IndexTTS2/19.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/prompt/23.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">Images of the pre-rendered cinematics also began to appear at this time.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/VoxCPM-Emilia/23.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/VoxCPM/23.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/MaskGCT/23.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/CosyVoice2/23.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/IndexTTS2/23.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/prompt/26.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">Over time the couple has four more children, although William never warms to them.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/VoxCPM-Emilia/26.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/VoxCPM/26.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/MaskGCT/26.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/CosyVoice2/26.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/IndexTTS2/26.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/prompt/29.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">Some transferred the conclusion to Ibsen, his translators and his director.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/VoxCPM-Emilia/29.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/VoxCPM/29.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/MaskGCT/29.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/CosyVoice2/29.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/en/IndexTTS2/29.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/prompt/17.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">因为眼前奥斯比约恩的鱼篓里，就躺着一个活生生的小人。</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/VoxCPM-Emilia/17.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/VoxCPM/17.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/MaskGCT/17.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/CosyVoice2/17.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/IndexTTS2/17.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/prompt/18.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">毒虫把毒品丢进马桶冲走，未料毒品又浮出水面，让警方逮个正着。</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/VoxCPM-Emilia/18.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/VoxCPM/18.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/MaskGCT/18.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/CosyVoice2/18.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/IndexTTS2/18.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/prompt/21.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">人们建造了一座带教堂的医院，奉献给圣约然。</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/VoxCPM-Emilia/21.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/VoxCPM/21.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/MaskGCT/21.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/CosyVoice2/21.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/IndexTTS2/21.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/prompt/38.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">本文旨在以苏联解体后，陆续解密的档案材料为根据。</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/VoxCPM-Emilia/38.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/VoxCPM/38.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/MaskGCT/38.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/CosyVoice2/38.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/IndexTTS2/38.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/prompt/45.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">在妙手盘丝环节中，男嘉宾需要两位尖果选手盘发。</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/VoxCPM-Emilia/45.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/VoxCPM/45.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/MaskGCT/45.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/CosyVoice2/45.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/IndexTTS2/45.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/prompt/58.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">一点五公里后，右转驶入京藏高速辅路。</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/VoxCPM-Emilia/58.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/VoxCPM/58.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/MaskGCT/58.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/CosyVoice2/58.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/exp_main_results/zh/IndexTTS2/58.wav"/></audio></td>
+				</tr>
+				
+			
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	
+	<div class="text-center">
+		<h2 id="ablation-study-effect-of-the-semi-discrete-bottleneck" style="text-align: center;">Ablation Study: Effect of the Semi-Discrete Bottleneck</h2>
+		 
+	</div>
+	
+	
+	<div class="table-responsive pt-3">
+		<table class="table table-hover pt-2">
+			<thead>
+				<tr>
+					<th style="vertical-align : middle;text-align: center">Prompt</th><th style="vertical-align : middle;text-align: center">Text</th><th style="vertical-align : middle;text-align: center">w/ FSQ: d4s9</th><th style="vertical-align : middle;text-align: center">w/ FSQ: d64s9</th><th style="vertical-align : middle;text-align: center">w/ FSQ: d256s9</th><th style="vertical-align : middle;text-align: center">w/ FSQ: d1024s9</th><th style="vertical-align : middle;text-align: center">w/o FSQ: d1024s♾️️</th>
+				</tr>
+			</thead>
+			<tbody>
+			
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/prompt/common_voice_en_123125.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">After all, who doesn’t want to overcome new challenges and achieve great heights?</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq4/common_voice_en_123125-common_voice_en_123126.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq64/common_voice_en_123125-common_voice_en_123126.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq256/common_voice_en_123125-common_voice_en_123126.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq1024/common_voice_en_123125-common_voice_en_123126.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/wofsq/common_voice_en_123125-common_voice_en_123126.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/prompt/common_voice_en_155313.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">Replace the Ts in Tim Tebow&#39;s name with any other consonant to get a Star Wars character</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq4/common_voice_en_155313-common_voice_en_155315.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq64/common_voice_en_155313-common_voice_en_155315.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq256/common_voice_en_155313-common_voice_en_155315.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq1024/common_voice_en_155313-common_voice_en_155315.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/wofsq/common_voice_en_155313-common_voice_en_155315.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/prompt/common_voice_en_10119832.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">Get the trust fund to the bank early.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq4/common_voice_en_10119832-common_voice_en_10119840.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq64/common_voice_en_10119832-common_voice_en_10119840.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq256/common_voice_en_10119832-common_voice_en_10119840.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq1024/common_voice_en_10119832-common_voice_en_10119840.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/wofsq/common_voice_en_10119832-common_voice_en_10119840.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/prompt/common_voice_en_10933823.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">When it comes to the crunch, our company will become insolvent.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq4/common_voice_en_10933823-common_voice_en_10933822.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq64/common_voice_en_10933823-common_voice_en_10933822.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq256/common_voice_en_10933823-common_voice_en_10933822.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq1024/common_voice_en_10933823-common_voice_en_10933822.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/wofsq/common_voice_en_10933823-common_voice_en_10933822.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/prompt/common_voice_en_17249419.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">I heard the land where the hobbits live, the Shire, has actually been filmed in New Zealand.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq4/common_voice_en_17249419-common_voice_en_17249428.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq64/common_voice_en_17249419-common_voice_en_17249428.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq256/common_voice_en_17249419-common_voice_en_17249428.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/fsq1024/common_voice_en_17249419-common_voice_en_17249428.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_fsq/wofsq/common_voice_en_17249419-common_voice_en_17249428.wav"/></audio></td>
+				</tr>
+				
+			
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	
+	<div class="text-center">
+		<h2 id="ablation-study-effect-of-residual-acoustic-modeling" style="text-align: center;">Ablation Study: Effect of Residual Acoustic Modeling</h2>
+		 
+	</div>
+	
+	
+	<div class="table-responsive pt-3">
+		<table class="table table-hover pt-2">
+			<thead>
+				<tr>
+					<th style="vertical-align : middle;text-align: center">Prompt</th><th style="vertical-align : middle;text-align: center">Text</th><th style="vertical-align : middle;text-align: center">Original</th><th style="vertical-align : middle;text-align: center">w/o RALM (24L TSLM - MiniCPM)&#34;</th><th style="vertical-align : middle;text-align: center">w/o RALM (30L TSLM - scratch)</th><th style="vertical-align : middle;text-align: center">w/o acoustic E_{&lt;i} in RALM input</th><th style="vertical-align : middle;text-align: center">w/o h_{residual} in LocDiT condtion</th>
+				</tr>
+			</thead>
+			<tbody>
+			
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/prompt/common_voice_en_75329.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">Looking through the telescope, I saw a circle of deep blue and the little round planet.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/origin/common_voice_en_75329-common_voice_en_75330.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/tslm_24/common_voice_en_75329-common_voice_en_75330.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/tslm_30/common_voice_en_75329-common_voice_en_75330.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/wo_aco/common_voice_en_75329-common_voice_en_75330.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/wo_res/common_voice_en_75329-common_voice_en_75330.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/prompt/common_voice_en_93674.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">He had never imagined that questions about life would be of such importance to a shepherd.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/origin/common_voice_en_93674-common_voice_en_93672.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/tslm_24/common_voice_en_93674-common_voice_en_93672.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/tslm_30/common_voice_en_93674-common_voice_en_93672.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/wo_aco/common_voice_en_93674-common_voice_en_93672.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/wo_res/common_voice_en_93674-common_voice_en_93672.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/prompt/common_voice_en_96260.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">He got up early with the idea of finding it.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/origin/common_voice_en_96260-common_voice_en_96263.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/tslm_24/common_voice_en_96260-common_voice_en_96263.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/tslm_30/common_voice_en_96260-common_voice_en_96263.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/wo_aco/common_voice_en_96260-common_voice_en_96263.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/wo_res/common_voice_en_96260-common_voice_en_96263.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/prompt/common_voice_en_673471.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">I would have won the Junior Olympics if not for those medaling kids.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/origin/common_voice_en_673471-common_voice_en_673472.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/tslm_24/common_voice_en_673471-common_voice_en_673472.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/tslm_30/common_voice_en_673471-common_voice_en_673472.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/wo_aco/common_voice_en_673471-common_voice_en_673472.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/wo_res/common_voice_en_673471-common_voice_en_673472.wav"/></audio></td>
+				</tr>
+				
+				<tr>
+					<td style="vertical-align : middle;text-align:center;">
+						<audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/prompt/common_voice_en_699384.wav"/></audio><br>
+					</td>
+					<td style="vertical-align : middle;text-align:center;">Of course, the two were unable to do anything.</td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/origin/common_voice_en_699384-common_voice_en_699385.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/tslm_24/common_voice_en_699384-common_voice_en_699385.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/tslm_30/common_voice_en_699384-common_voice_en_699385.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/wo_aco/common_voice_en_699384-common_voice_en_699385.wav"/></audio></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="./audio/abla_residual/wo_res/common_voice_en_699384-common_voice_en_699385.wav"/></audio></td>
+				</tr>
+				
+			
+			</tbody>
+		</table>
+	</div>
 </div>
 
 
