@@ -14,6 +14,30 @@
 	
     <style>
 		.image-container{display:flex;justify-content:center;align-items:center;margin-bottom:5px}.image-container img{margin-right:0px;}.image-container img:last-child{margin-right:0}.caption{text-align:center;font-size:16px}
+		
+		/* Back to top button */
+		#backToTop {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			background-color: #007bff;
+			color: white;
+			border: none;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			font-size: 20px;
+			cursor: pointer;
+			display: none;
+			z-index: 1000;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+			transition: all 0.3s ease;
+		}
+		
+		#backToTop:hover {
+			background-color: #0056b3;
+			transform: translateY(-2px);
+		}
 	</style>
 </head>
 
@@ -33,33 +57,18 @@
 	</div> -->
 	<div class="text-center">
 		<h1> Hierarchical Semantic-Acoustic Modeling via Semi-Discrete Residual Representations for Expressive End-to-End Speech Synthesis </h1>
-		<!-- <p class="fst-italic mb-0"><br>VoxCPM Team</p>
-		<p><b>ModelBest｜THUHCSI｜OpenBMB</b></p> -->
-		<!-- <div class="image-container">
-			<div>
-				<img src="./pics/mb.png" alt="" height="600" width="600">
-				<p class="caption"></p>
-			</div>
-			<div>
-				<img src="./pics/hcsi.png" alt="" height="600" width="600">
-				<p class="caption"></p>
-			</div>
-			<div>
-				<img src="./pics/bmb.png" alt="" height="600" width="600">
-				<p class="caption"></p>
-			</div>
-		
-		</div> -->
-		<!-- <a href="https://github.com/OpenBMB/VoxCPM/"><img src="https://img.shields.io/badge/Project%20Page-GitHub-blue"></a>
-		<a href="https://huggingface.co/openbmb/VoxCPM-0.5B"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-OpenBMB-yellow"></a>
-		<a href="https://modelscope.cn/models/OpenBMB/VoxCPM-0.5B"><img src="https://img.shields.io/badge/ModelScope-OpenBMB-purple"></a>
-		<a href="https://huggingface.co/spaces/OpenBMB/VoxCPM-Demo"><img src="https://img.shields.io/badge/Live%20PlayGround-Demo-orange"></a> -->
 	</div>
-	
+	<p class="fst-italic mb-0 text-center"><br>Anonymous Authors</p>
 	
 	<p><b>Abstract:</b> Generative models for speech synthesis face a fundamental trade-off: discrete tokens ensure stability but sacrifice expressivity, while continuous signals retain acoustic richness but suffer from error accumulation due to task entanglement. This challenge has driven the field towards multi-stage pipelines that rely on pre-trained speech tokenizers, but these create a semantic-acoustic divide, limiting holistic and expressive speech generation. We resolve these dilemma through hierarchical semantic-acoustic modeling with semi-discrete residual representations.Our framework introduces a differentiable quantization bottleneck that induces natural specialization: a Text-Semantic Language Model (TSLM) generates semantic-prosodic plans, while a Residual Acoustic Model (RALM) recovers fine-grained acoustic details.This hierarchical semantic-acoustic representation guides a local diffusion-based decoder to generate high-fidelity speech latents. Critically, the entire architecture is trained end-to-end under a simple diffusion objective, eliminating dependency on external speech tokenizers. Trained on over 1 million hours of speech, our 0.5B-parameter model achieves state-of-the-art zero-shot TTS performance among open-source systems, demonstrating that our approach delivers expressive and stable synthesis.
-</p>
-	<p><b>Key Features</b>
+	</p>
+	
+	<div class="text-center">
+		<img src="./pics/model.png" alt="VoxCPM Model Architecture" class="img-fluid" style="max-width: 80%; height: auto;">
+		<p class="caption mt-3"><b>Figure 1:</b> VoxCPM Model Architecture</p>
+	</div>
+	
+	<!-- <p><b>Key Features</b>
 		<ul>
 			
 				<li><b>Context-Aware, Expressive Speech Generation</b> - VoxCPM comprehends text to infer and generate appropriate prosody, delivering speech with remarkable expressiveness and natural flow. It spontaneously adapts speaking style based on content, producing highly fitting vocal expression trained on a bilingual corpus of over 1 million hours.</li>
@@ -69,10 +78,9 @@
 				<li><b>High-Efficiency Synthesis</b> - VoxCPM supports streaming synthesis with a Real-Time Factor (RTF) as low as 0.17 on a consumer-grade NVIDIA RTX 4090 GPU, making it possible for real-time applications.</li>
 			
 		</ul>
-	</p>
-
+	</p> -->
 	<p>
-		<b>Experimental Samples</b>
+		<b>Experimental Results</b>
 		<ul>
 			
 				<li><a href="#main-results-on-zero-shot-tts">Main Results on Zero-Shot TTS</a></li>
@@ -80,6 +88,9 @@
 				<li><a href="#ablation-study-effect-of-the-semi-discrete-bottleneck">Ablation Study: Effect of the Semi-Discrete Bottleneck</a></li>
 			
 				<li><a href="#ablation-study-effect-of-residual-acoustic-modeling">Ablation Study: Effect of Residual Acoustic Modeling</a></li>
+
+				<li><a href="#visualization">Visualization of the Hierarchical Representations</a></li>
+
 			
 		</ul>
 	</p>
@@ -95,7 +106,7 @@
 			
 				<li><a href="#voice-and-recording-condition-cloning">Voice and Recording Condition Cloning</a></li>
 			
-				<li><a href="#text-guided-speech-generation">Text-Guided Speech Generation</a></li>
+				<li><a href="#text-guided-speech-generation">Context-Aware Speech Generation</a></li>
 			
 				<li><a href="#mathematical-symbol-awareness">Mathematical Symbol Awareness</a></li>
 			
@@ -117,7 +128,7 @@
 		<h2 id="main-results-on-zero-shot-tts" style="text-align: center;">Main Results on Zero-Shot TTS</h2>
 		 
 	</div>
-	
+	<p>We conducted our evaluations on the seed-test-zh and seed-test-en benchmarks from Seed-TTS, using multiple powerful open-source TTS systems as our baselines. VoxCPM is our main model trained on over 1 million hours of binlingual speech, and VoxCPM-Emilia is train on 95K hours Emilia dataset.</p>
 	
 	<div class="table-responsive pt-3">
 		<table class="table table-hover pt-2">
@@ -287,7 +298,7 @@
 		<h2 id="ablation-study-effect-of-the-semi-discrete-bottleneck" style="text-align: center;">Ablation Study: Effect of the Semi-Discrete Bottleneck</h2>
 		 
 	</div>
-	
+	<p>We conducted ablation studies on the "semi-discrete" bottleneck dimension of the FSQ module, and we found that d256s9 reveals a key trade-off.</p>
 	
 	<div class="table-responsive pt-3">
 		<table class="table table-hover pt-2">
@@ -370,11 +381,9 @@
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	
 	<div class="text-center">
-		<h2 id="ablation-study-effect-of-residual-acoustic-modeling" style="text-align: center;">Ablation Study: Effect of Residual Acoustic Modeling</h2>
-		 
+		<h2 id="ablation-study-effect-of-residual-acoustic-modeling" style="text-align: center;">Ablation Study: Effect of Residual Acoustic Modeling</h2>	 
 	</div>
-	
-	
+	<p>We conducted ablation studies about the residual language modeling, which validated the effect of our core architectural innovations.</p>
 	<div class="table-responsive pt-3">
 		<table class="table table-hover pt-2">
 			<thead>
@@ -452,6 +461,25 @@
 </div>
 
 
+
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+
+	<div class="text-center">
+		<h2 id="visualization" style="text-align: center;">Visualization of the Hierarchical Representations</h2>
+	</div>
+	<p>T-SNE visualizations confirm the specialized roles of TSLM and RALM. TSLM-FSQ outputs form semantic-prosodic structures closely tied to text content, whereas RALM residuals exhibit strong speaker-related variations for acoustic rendering. More analysis details can be found in the paper Appendix.</p>
+	<div class="row mt-4">
+		<div class="col-md-6 text-center">
+			<img src="./pics/tsne1.png" alt="t-SNE Visualization 1" class="img-fluid" style="max-width: 100%; height: auto;">
+			<p class="caption mt-2"><b>Figure 2:</b> t-SNE Visualization of Semantic Representations</p>
+		</div>
+		<div class="col-md-6 text-center">
+			<img src="./pics/tsne2.png" alt="t-SNE Visualization 2" class="img-fluid" style="max-width: 100%; height: auto;">
+			<p class="caption mt-2"><b>Figure 3:</b> t-SNE Visualization of Acoustic Representations</p>
+		</div>
+	</div>
+	
+</div>
 
 
 
@@ -1080,6 +1108,29 @@
 </article>
 </main>
 </div>
+
+<!-- Back to top button -->
+<button id="backToTop" title="返回顶端">↑</button>
+
+<script>
+// Back to top functionality
+window.addEventListener('scroll', function() {
+    const backToTopButton = document.getElementById('backToTop');
+    if (window.pageYOffset > 300) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
+
+document.getElementById('backToTop').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+</script>
+
 </body>
 
 </script>
